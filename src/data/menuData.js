@@ -2,8 +2,8 @@
 
 const menuData = {
   storeName: "Carolina's Mexican Kitchen",
-  note:
-  // note: "All plates come with a side of rice & beans",
+
+  note: "All plates come with a side of rice & beans",
   sections: [
     {
       category: "Botanas / Appetizers",
