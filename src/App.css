@@ -1,0 +1,81 @@
+/* src/components/MenuPage.css */
+.menu-page {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 24px 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  color: #222;
+}
+.menu-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.menu-header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 6px;
+}
+.menu-header p {
+  color: #555;
+  margin: 0;
+}
+
+.menu-section + .menu-section {
+  margin-top: 28px;
+}
+.menu-section h2 {
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  color: #2a2a2a;
+}
+.menu-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 11px 10px;
+  background: #fafafa;
+  border-radius: 10px;
+}
+.item-photo {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.item-right h4 {
+  margin: 0 0 6px;
+}
+.item-right p {
+  margin: 0 6px 10px;
+  color: #444;
+}
+.item-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.badges .badge {
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+}
+.badge.veg {
+  background: #6ea94b;
+}
+.badge.vegan {
+  background: #2d8f61;
+}
+
+.menu-footer {
+  text-align: center;
+  margin-top: 36px;
+  color: #666;
+}
