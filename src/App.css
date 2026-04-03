@@ -19,7 +19,7 @@
   margin-bottom: 6px;
 }
 .menu-header p {
-  color: #555;
+  color: #9b9b9b;
   margin: 0;
 }
 
@@ -27,10 +27,10 @@
   margin-top: 28px;
 }
 .menu-section h2 {
-  border-bottom: 2px solid #e5e5e5;
+  border-bottom: 2px solid #ffffff;
   padding-bottom: 8px;
   margin-bottom: 16px;
-  color: #2a2a2a;
+  color: #9b9b9b;
 }
 .menu-item {
   display: grid;
@@ -38,7 +38,7 @@
   gap: 12px;
   margin-bottom: 14px;
   padding: 11px 10px;
-  background: #fafafa;
+  background: #da9412;
   border-radius: 10px;
 }
 .item-photo {
