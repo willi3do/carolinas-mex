@@ -23,7 +23,7 @@ export default function About() {
   return (
     <div className="about-section">
       <h2>About Us</h2>
-      <p>{story}</p>
+      <div>{story}</div>
     </div>
   );
 }

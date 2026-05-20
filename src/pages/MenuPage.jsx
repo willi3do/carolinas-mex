@@ -78,6 +78,7 @@ export default function MenuPage() {
           <SectionBlock key={sec.category} section={sec} />
         ))}
       </div>
+
       <footer className="text-center mt-9 text-gray-600">
         <p>
           © {new Date().getFullYear()} {menuData.storeName}

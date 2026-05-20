@@ -1,7 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   margin: 0;
+}
+
+@font-face {
+  font-family: "agbalumo";
+  src: url("/Fonts/Agbalumo/Agbalumo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "cookie";
+  src: url("/Fonts/Cookie/Cookie-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "molle";
+  src: url("/Fonts/Molle/Molle-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-agbalumo: "agbalumo", sans-serif;
+  --font-cookie: "cookie", sans-serif;
+  --font-molle: "molle", sans-serif;
+}
+
+.agbalumo {
+  font-family: "agbalumo", sans-serif;
+}
+
+.cookie {
+  font-family: "cookie", sans-serif;
+}
+
+.molle {
+  font-family: "molle", sans-serif;
 }
