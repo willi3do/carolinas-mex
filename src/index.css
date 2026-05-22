@@ -45,3 +45,8 @@ body {
 .molle {
   font-family: "molle", sans-serif;
 }
+
+.text-outline {
+  -webkit-text-stroke: 3px white;
+  paint-order: stroke fill;
+}
