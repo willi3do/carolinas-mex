@@ -7,10 +7,10 @@ export default function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 flex h-auto min-w-full shadow-md z-100  ">
+    <nav className="sticky top-0 flex flex-col h-auto min-w-full shadow-lg z-100  ">
       <div className="flex justify-around w-full  items-center bg-amber-500 border-2">
         <img
-          className=" p-1 rounded-3xl object-cover w-20 h-32.5 object-center"
+          className=" m-2 rounded-3xl border-2 object-cover w-16 h-30  object-center"
           src="/Images/hero.jpg"
           alt="Carolina's Mex Kitchen hero image"
         />
@@ -31,13 +31,10 @@ export default function Nav() {
         </button>
       </div>
       {isOpen && (
-        <div
-          className=" bg-white flex flex-col border-gray-200 
-         text-sm"
-        >
+        <div className=" bg-stone-500 flex flex-row justify-center items-center h-10 w-full border-black text-md p-5">
           <Link
             to="/"
-            className="block px-6 py-3 text-gray-800 text-sm hover:bg-amber-50 hover:text-amber-600 transition-colors"
+            className="block px-6 py-3 text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Home
