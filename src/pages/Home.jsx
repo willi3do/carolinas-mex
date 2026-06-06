@@ -1,35 +1,40 @@
 import { Link } from "react-router-dom";
+import HeroSlides from "../components/HeroSlides.jsx";
 
 export default function Home() {
   const favoritesSection = [
-    { id: 1, name: "item1", image: "Image route" },
-    { id: 2, name: "item2", image: "Image route" },
-    { id: 3, name: "item3", image: "Image route" },
-    { id: 4, name: "item4", image: "Image route" },
-    { id: 5, name: "item5", image: "Image route" },
-    { id: 6, name: "item6", image: "Image route" },
+    { id: 1, name: "Birria Egg Rolls", image: "/Images/birriaEggRolls1.png" },
+    { id: 2, name: "Ceviche", image: "/Images/ceviche.png" },
+    { id: 3, name: "key Lime Pie", image: "/Images/keyLimePie.png" },
+    {
+      id: 4,
+      name: "Quesa Birria Tacos",
+      image: "/Images/quesaBirriaTacos.png",
+    },
+    { id: 5, name: "Cremita De Coco", image: "/Images/cremitaDeCoco.png" },
+    { id: 6, name: "Carne Asada Plate", image: "/Images/asadaPlate1.png" },
   ];
   return (
-    <div className=" flex flex-col min-h-full min-w-full justify-center overflow-x-hidden ">
-      <section
+    <div className=" flex flex-col min-h-full min-w-full justify-center items-center overflow-x-hidden bg-amber-600">
+      <HeroSlides />
+      {/* <section
         id="heroSection"
         style={{
           backgroundImage: `url(/Images/birria-eggrolls.jpeg)`,
         }}
         className="bg-cover bg-center bg-no-repeat min-h-[50vh] relative p-1"
       >
-        {/* Overlay — sibling to content, not a wrapper */}
         <div className="absolute inset-0 bg-black/50" />
 
         <div
           id="heroContainer"
-          className="relative flex flex-col h-full justify-center items-center text-center gap-5"
+          className="relative flex flex-col h-full justify-center items-center text-center gap-5 pt-25"
         >
-          <div id="hero-eyebrow" className="text-6xl text-center text-white">
+          <div id="hero-eyebrow" className=" text-6xl text-center text-white">
             Made daily with amor
           </div>
 
-          <p className="text-3xl text-white text-center">
+          <p className="text-3xl text-white text-center ">
             Experience the flavors of traditional Mexican cooking with fresh
             ingredients and authentic recipes. We are a seed oil free kitchen.
           </p>
@@ -38,28 +43,22 @@ export default function Home() {
               Order now
             </button>
           </Link>
-
-          <Link to="/reservations">
-            <button className="bg-green-500 hover:bg-stone-300 text-white font-bold py-4 px-7 rounded m-5">
-              Reserve a table
-            </button>
-          </Link>
         </div>
-      </section>
+      </section> */}
 
       <section id="favoritesSection" className="bg-amber-500 p-10">
-        <h1 className="text-4xl text-center font-bold mb-10">
+        <h1 className="text-5xl text-center font-bold mb-10">
           Popular Menu Items
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 ">
           {favoritesSection.map((item) => (
-            <div key={item.id} className="flex flex-col items-center gap-1">
+            <div key={item.id} className="flex flex-col items-center gap-1 ">
               <img
-                src={"item.image"}
+                src={item.image}
                 alt={item.name}
-                className="w-1/2 h-20 bg-cyan-400 object-cover rounded-md  hover:bg-stone-300"
+                className="w-full h-50 border-6 object-cover rounded-lg hover:scale-110 "
               />
-              <p className="text-lg font-semibold">{item.name}</p>
+              <p className="text-2xl font-semibold">{item.name}</p>
             </div>
           ))}
         </div>

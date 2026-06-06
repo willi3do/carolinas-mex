@@ -7,11 +7,11 @@ export default function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 flex flex-col h-auto min-w-full shadow-lg z-100  ">
-      <div className="flex justify-around w-full  items-center bg-amber-500 border-2">
+    <nav className="sticky top-0 flex flex-col min-w-full px-3 py-1 shadow-lg z-100 bg-amber-500/80 border-4  backdrop-blur-sm">
+      <div className="flex justify-around w-full text-center  items-center gap-2 ">
         <img
-          className=" m-2 rounded-3xl border-2 object-cover w-16 h-30  object-center"
-          src="/Images/hero.jpg"
+          className="  rounded-3xl border object-cover w-fill h-30  object-center"
+          src="/Images/logoDoll.jpg"
           alt="Carolina's Mex Kitchen hero image"
         />
         <Link
@@ -21,7 +21,7 @@ export default function Nav() {
           Carolinas Mexican Kitchen
         </Link>
         <button
-          className="flex flex-col gap-1.5 cursor-pointer border bg-white p-2 rounded "
+          className="flex flex-col gap-1.5 cursor-pointer border-2 bg-white p-2 rounded "
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
