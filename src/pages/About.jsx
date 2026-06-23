@@ -21,7 +21,7 @@ export default function About() {
     </p>
   );
   return (
-    <div className="about-section">
+    <div className="about-section w-100 ">
       <h2>About Us</h2>
       <div>{story}</div>
     </div>
