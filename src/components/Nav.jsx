@@ -7,27 +7,27 @@ export default function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 flex flex-col min-w-full px-3 py-1 shadow-lg z-100 bg-amber-500/80 border-4  backdrop-blur-sm">
-      <div className="flex justify-around w-full text-center  items-center gap-2 ">
+    <nav className="sticky top-0 flex flex-col min-w-full px-3 py-1 shadow-lg z-100 bg-primary1 border-4  backdrop-blur-sm h-90">
+      <div className="flex justify-between p-3 mx-1 my-2 w-full text-center  items-center gap-2 ">
         <img
-          className="  rounded-3xl border object-cover w-fill h-30  object-center"
-          src="/Images/logoDoll.jpg"
+          className="rounded-3xl  object-cover w-fill h-80 w-auto  object-center"
+          src="/Images/logoDoll.png"
           alt="Carolina's Mex Kitchen hero image"
         />
         <Link
           to="/"
-          className="text-6xl text-outline leading-tight font-cookie"
+          className="text-9xl text-outline leading-tight font-cookie w-[80%]"
         >
           Carolinas Mexican Kitchen
         </Link>
         <button
-          className="flex flex-col gap-1.5 cursor-pointer border-2 bg-white p-2 rounded "
+          className="flex flex-col cursor-pointer w-20 h-15 items-center justify-evenly "
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span className="w-6 h-1 bg-black block rounded"></span>
-          <span className="w-6 h-1 bg-black block rounded"></span>
-          <span className="w-6 h-1 bg-black block rounded"></span>
+          <span className="w-10 h-2 bg-black rounded"></span>
+          <span className="w-10 h-2 bg-black rounded"></span>
+          <span className="w-10 h-2 bg-black rounded"></span>
         </button>
       </div>
       {isOpen && (

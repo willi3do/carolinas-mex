@@ -15,7 +15,7 @@ export default function Home() {
     { id: 6, name: "Carne Asada Plate", image: "/Images/asadaPlate1.png" },
   ];
   return (
-    <div className=" flex flex-col min-h-full min-w-full justify-center items-center overflow-x-hidden bg-amber-600">
+    <div className=" flex flex-col min-h-full min-w-full justify-center items-center overflow-x-hidden bg-primary">
       <HeroSlides />
       {/* <section
         id="heroSection"
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section id="favoritesSection" className="bg-amber-500 p-10">
+      <section id="favoritesSection" className="w-full p-10">
         <h1 className="text-5xl text-center font-bold mb-10">
           Popular Menu Items
         </h1>
@@ -64,22 +64,56 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="aboutRestaurant">
+      {/* <section id="aboutRestaurant">
         From our familia to yours. My family immigrated from Michoacán, Mexico,
         and no matter how much or how little we had, there was always a
         homecooked meal made with love. Carolina’s was born from that same
         spirit — authentic, from-scratch cooking passed down from the women who
         raised me. Every dish is made with the freshest ingredients, the highest
         quality meats, and zero seed oils. Siempre hecho con amor. 🤍
+      </section> */}
+
+      <section
+        id="ourHoursAndLocation"
+        className="w-full h-100 flex items-top justify-center"
+      >
+        <div
+          id="left"
+          className="bg-primary1 w-1/2 h-auto text-5xl flex flex-col items-center justify-center gap-20"
+        >
+          <h1 className="text-8xl text-center">Our Hours</h1>
+          {/* <ul>
+            <li>Monday - Friday: 11:00 AM - 8:00 PM</li>
+            <li>Saturday: 11:00 AM - 8:00 PM</li>
+            <li>Sunday: 11:00 PM - 8:00 PM</li>
+          </ul> */}
+          <div>Monday - Sunday : 11 AM to 8PM</div>
+        </div>
+
+        <div
+          id="right"
+          className="bg-amber-600 w-1/2 h-auto flex flex-col items-center justify-center gap-20"
+        >
+          <img
+            className="w-150 h-150 "
+            src="/Images/bigDollFace.svg"
+            alt="log doll (large face)"
+          />
+          <div>
+            {" "}
+            <a
+              href="https://maps.app.goo.gl/jM4uaojHiMrBiFJM9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-stone-300 text-white font-bold py-4 px-7 rounded m-5"
+            >
+              View on Google Maps
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section id="reviewsAndTestimonials">
-        {/* Reviews and testimonials content would go here */}
-      </section>
-
-      <section id="locationAndHours"></section>
-
-      <section id="footer"></section>
+      <section id="footer" className="bg-accent-red h-100 w-full"></section>
     </div>
   );
 }

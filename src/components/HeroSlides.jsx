@@ -11,7 +11,7 @@ const slides = [
   {
     id: 1,
     title: "Desert Hero",
-    bg: "/Images/keyLimePie.png",
+    bg: "/Images/desertHero.svg",
     CTA: "A Sweet Ending Starts Here",
     description:
       "Homemade flan and key lime pie that hit the sweet spot every time.",
@@ -19,7 +19,8 @@ const slides = [
   },
   {
     id: 2,
-    title: "Coffee Hero",
+    title: "Papa's Coffecitos",
+    popsLogo: "/Images/papa'sLogo.png",
     bg: "/Images/horchataLatte.png",
     CTA: "A Classic Flavor With A Coffee Twist",
     description: "Homemade paired with bold espresso in every cup.",
@@ -60,7 +61,7 @@ export default function HeroSlider() {
     <>
       <section
         id="heroSlideContainer"
-        className=" w-50vh  h-115 overflow-hidden flex flex-col items-center justify-center bg-emerald-500/50 relative border box-content "
+        className=" w-screen  h-200 overflow-hidden flex flex-col items-center justify-center bg-accent-red relative border box-content "
       >
         {/* Slide content */}
         <divs
@@ -80,21 +81,29 @@ export default function HeroSlider() {
           <div
             id="slideContent"
             style={{
-              backgroundImage: `url(${slides[current].bg})`,
+              backgroundImage: `
+              url(${slides[current].bg})`,
             }}
-            className=" bg-green-800 w-screen h-full  bg-no-repeat flex flex-col justify-center items-center text-1xl bg-contain bg-center relative  "
+            className="w-full h-full bg-no-repeat flex flex-col gap-20 justify-center items-center text-1xl bg-cover bg-center relative"
           >
             <h1
               id="heroTitle"
-              className=" text-center font-agbalumo text-2xl text-white [-webkit-text-stroke:2px_black]  bg-black/40 "
+              className="w-full h-50 text-center font-agbalumo text-9xl text-white [-webkit-text-stroke:2px_black] bg-accent-red "
             >
               {slides[current].title}
             </h1>
+            {slides[current].popsLogo && (
+              <img
+                src={slides[current].popsLogo}
+                alt="Papa's Coffecitos Logo"
+                className="w-100 h-100 object-cover bg-emerald-800"
+              />
+            )}
             <div id="textContent" className=" w-auto h-auto flex-row ">
-              <p className="text-black text-2xl font-bold font-agbalumo text-center bg-amber-300/80 ">
+              <p className="text-black text-5xl font-bold font-agbalumo text-center bg-amber-300/80 ">
                 {slides[current].CTA}
               </p>
-              <p className="text-black text-2xl font-bold font-agbalumo text-center bg-amber-300/80 ">
+              <p className="text-black text-4xl font-bold font-agbalumo text-center bg-amber-300/80 ">
                 {slides[current].description}
               </p>
               {/* Nav arrows */}
@@ -111,26 +120,31 @@ export default function HeroSlider() {
         </divs>
         <div className="nav-arrows w-full h-full flex items-center justify-between  z-40 p-5 bottom-1 absolute">
           <button
-            className="nav-btn  bg-amber-100"
+            className="nav-btn "
             onClick={prev}
             aria-label="Previous slide"
           >
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <img
+              className="w-15 h-15 "
+              src="/Images/leftArrow.svg"
+              alt="Left Arrow"
+            />
+            {/* <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 d="M11 4L6 9l5 5"
                 stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              />
-            </svg>
+              /> */}
           </button>
-          <button
-            className="nav-btn bg-amber-100"
-            onClick={next}
-            aria-label="Next slide"
-          >
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <button className="nav-btn" onClick={next} aria-label="Next slide">
+            <img
+              className="w-15 h-15 "
+              src="/Images/rightArrow.svg"
+              alt="Right Arrow"
+            />
+            {/* <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 d="M7 4l5 5-5 5"
                 stroke="currentColor"
@@ -138,7 +152,7 @@ export default function HeroSlider() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>
+            </svg> */}
           </button>
         </div>
       </section>

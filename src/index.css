@@ -29,9 +29,19 @@ body {
 }
 
 @theme {
+  /* Fonts */
   --font-agbalumo: "agbalumo", sans-serif;
   --font-cookie: "cookie", sans-serif;
   --font-molle: "molle", sans-serif;
+  /* Colors */
+  --color-primary: #ffb300;
+  --color-primary1: #ce8600;
+  --color-secondary: #7c3606;
+
+  /* Accents */
+  --color-accent-red: #82181a;
+  --color-accent-dark: #000000;
+  --color-accent-light: #ffffff;
 }
 
 .agbalumo {
