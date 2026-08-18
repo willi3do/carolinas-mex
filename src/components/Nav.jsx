@@ -7,16 +7,20 @@ export default function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 flex flex-col min-w-full px-3 py-1 shadow-lg z-100 bg-primary1 border-4  backdrop-blur-sm h-90">
-      <div className="flex justify-between p-3 mx-1 my-2 w-full text-center  items-center gap-2 ">
-        <img
-          className="rounded-3xl  object-cover w-fill h-80 w-auto  object-center"
-          src="/Images/logoDoll.png"
-          alt="Carolina's Mex Kitchen hero image"
-        />
+    <nav className="sticky w-full shadow-lg z-50 bg-primary1 border-4 backdrop-blur-sm h-auto flex flex-col justify-between">
+      <div className="flex md:flex-row justify-between items-center gap-3 w-full px-3 ">
+        {/* Logo Container*/}
+        <div className="shrink-0">
+          <img
+            className="rounded-1xl object-cover h-20 md:h-16 w-auto object-center"
+            src="/Images/logoDoll.png"
+            alt="Carolina's Mex Kitchen hero image"
+          />
+        </div>
+        {/* Title Link */}
         <Link
           to="/"
-          className="text-9xl text-outline leading-tight font-cookie w-[80%]"
+          className="text-4xl sm:text-6xl md:text-7xl text-center text-outline leading-tight font-cookie w-full md:w-auto"
         >
           Carolinas Mexican Kitchen
         </Link>
@@ -46,13 +50,13 @@ export default function Nav() {
           >
             Menu
           </Link>
-          <Link
+          {/* <Link
             to="/reservations"
             className="block px-6 py-3 text-gray-800 font-medium hover:bg-amber-50 hover:text-amber-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Reservations
-          </Link>
+          </Link> */}
           <Link
             to="/about"
             className="block px-6 py-3 text-gray-800 font-medium hover:bg-amber-50 hover:text-amber-600 transition-colors"

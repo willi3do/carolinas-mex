@@ -46,17 +46,17 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section id="favoritesSection" className="w-full p-10">
+      <section id="favoritesSection" className="w-full h-full p-10 ">
         <h1 className="text-5xl text-center font-bold mb-10">
           Popular Menu Items
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 shrink-0">
           {favoritesSection.map((item) => (
             <div key={item.id} className="flex flex-col items-center gap-1 ">
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-50 border-6 object-cover rounded-lg hover:scale-110 "
+                className="w-50 h-50 md:h-100 md:w-100 shrink-0 border-2 object-cover rounded-lg hover:scale-110 "
               />
               <p className="text-2xl font-semibold">{item.name}</p>
             </div>
@@ -75,37 +75,37 @@ export default function Home() {
 
       <section
         id="ourHoursAndLocation"
-        className="w-full h-100 flex items-top justify-center"
+        className="w-full h-100 flex items-center justify-center"
       >
         <div
           id="left"
-          className="bg-primary1 w-1/2 h-auto text-5xl flex flex-col items-center justify-center gap-20"
+          className="bg-primary1 w-full h-full text-center p-4 text-5xl flex flex-col items-center justify-center gap-1"
         >
-          <h1 className="text-8xl text-center">Our Hours</h1>
+          <h1 className="text-3xl md:text-6xl text-center">Our Hours</h1>
           {/* <ul>
             <li>Monday - Friday: 11:00 AM - 8:00 PM</li>
             <li>Saturday: 11:00 AM - 8:00 PM</li>
             <li>Sunday: 11:00 PM - 8:00 PM</li>
           </ul> */}
-          <div>Monday - Sunday : 11 AM to 8PM</div>
+          <div>Monday - Sunday 11 AM to 8PM</div>
         </div>
 
         <div
           id="right"
-          className="bg-amber-600 w-1/2 h-auto flex flex-col items-center justify-center gap-20"
+          className="bg-amber-600 w-full h-full flex flex-col items-center justify-center text-center "
         >
           <img
-            className="w-150 h-150 "
+            className="w-full h-100 p-5 "
             src="/Images/bigDollFace.svg"
             alt="log doll (large face)"
           />
-          <div>
+          <div className="w-full h-full  ">
             {" "}
             <a
               href="https://maps.app.goo.gl/jM4uaojHiMrBiFJM9"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-stone-300 text-white font-bold py-4 px-7 rounded m-5"
+              className="bg-green-500 hover:bg-stone-300 text-white font-bold py-4 px-7 rounded m-5 "
             >
               View on Google Maps
             </a>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-
+import LeftArrow from "../icons/LeftArrow.jsx";
+import RightArrow from "../icons/RightArrow.jsx";
 const slides = [
   {
     id: 0,
@@ -21,7 +22,7 @@ const slides = [
     id: 2,
     title: "Papa's Coffecitos",
     popsLogo: "/Images/papa'sLogo.png",
-    bg: "/Images/horchataLatte.png",
+    bg: "/Images/Papas-HeroBG.svg",
     CTA: "A Classic Flavor With A Coffee Twist",
     description: "Homemade paired with bold espresso in every cup.",
     button: "Cafecito Menu",
@@ -61,9 +62,8 @@ export default function HeroSlider() {
     <>
       <section
         id="heroSlideContainer"
-        className=" w-screen  h-200 overflow-hidden flex flex-col items-center justify-center bg-accent-red relative border box-content "
+        className=" w-full max-w-full h-auto overflow-hidden flex flex-col items-center justify-center bg-accent-red relative border box-content "
       >
-        {/* Slide content */}
         <divs
           key={current}
           className={`slide-track w-full h-full ${
@@ -78,6 +78,7 @@ export default function HeroSlider() {
                   : ""
           }`}
         >
+          {/* Slide content */}
           <div
             id="slideContent"
             style={{
@@ -86,64 +87,51 @@ export default function HeroSlider() {
             }}
             className="w-full h-full bg-no-repeat flex flex-col gap-20 justify-center items-center text-1xl bg-cover bg-center relative"
           >
+            {/* Title on the hero */}
             <h1
               id="heroTitle"
-              className="w-full h-50 text-center font-agbalumo text-9xl text-white [-webkit-text-stroke:2px_black] bg-accent-red "
+              className="w-full h-20 flex justify-center items-center font-agbalumo text-4xl md:text-5xl  text-white [-webkit-text-stroke:2px_black] "
             >
               {slides[current].title}
+
+              {slides[current].popsLogo && (
+                <img
+                  src={slides[current].popsLogo}
+                  alt="Papa's Coffecitos Logo"
+                  className="w-20 h-40 object-cover pt-5 "
+                />
+              )}
             </h1>
-            {slides[current].popsLogo && (
-              <img
-                src={slides[current].popsLogo}
-                alt="Papa's Coffecitos Logo"
-                className="w-100 h-100 object-cover bg-emerald-800"
-              />
-            )}
-            <div id="textContent" className=" w-auto h-auto flex-row ">
-              <p className="text-black text-5xl font-bold font-agbalumo text-center bg-amber-300/80 ">
+            {/* Call to Action */}
+            <div id="CTA" className=" w-full h-auto flex-row ">
+              <p className="text-black text-1xl font-bold font-agbalumo text-center bg-amber-300/80 ">
                 {slides[current].CTA}
               </p>
-              <p className="text-black text-4xl font-bold font-agbalumo text-center bg-amber-300/80 ">
+              {/* <p className="text-black text-2xl font-bold font-agbalumo text-center bg-amber-300/80 ">
                 {slides[current].description}
-              </p>
+              </p> */}
               {/* Nav arrows */}
             </div>
-
-            {/* Slide counter */}
-            {/* <div className="slide-counter ">
-              <span className="active-num">
-                {String(current + 1).padStart(2, "0")}
-              </span>
-              <span>/ {String(slides.length).padStart(2, "0")}</span>
-            </div> */}
           </div>
         </divs>
-        <div className="nav-arrows w-full h-full flex items-center justify-between  z-40 p-5 bottom-1 absolute">
+        {/* Hero Nav Arrows */}
+        <div className="nav-arrows w-full h-full flex items-center justify-between z-40 p-5 bottom-1 absolute">
           <button
-            className="nav-btn "
+            className="nav-btn"
             onClick={prev}
             aria-label="Previous slide"
           >
-            <img
-              className="w-15 h-15 "
-              src="/Images/leftArrow.svg"
-              alt="Left Arrow"
-            />
-            {/* <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path
-                d="M11 4L6 9l5 5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              /> */}
+            <LeftArrow />
           </button>
+
           <button className="nav-btn" onClick={next} aria-label="Next slide">
-            <img
-              className="w-15 h-15 "
+            {/* <img
+              className="w-10 h-10 lg:w-15 lg:h-15 "
               src="/Images/rightArrow.svg"
               alt="Right Arrow"
-            />
+            /> */}
+
+            <RightArrow />
             {/* <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 d="M7 4l5 5-5 5"
